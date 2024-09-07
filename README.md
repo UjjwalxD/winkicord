@@ -1,4 +1,4 @@
-# - Note: its under developer
+# - Note: its under development
 
 # Winkicord
 
