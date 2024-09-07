@@ -1,3 +1,5 @@
+# - Note: its under developer
+
 # Winkicord
 
 **Effortlessly create a fully functional Discord music bot with just one line of Python code.**
