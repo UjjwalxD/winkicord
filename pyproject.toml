@@ -6,7 +6,7 @@ authors = [
 ]
 description = "Effortlessly create a fully functional Discord music bot with just one line of Python code."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
