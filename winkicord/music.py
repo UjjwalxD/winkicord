@@ -14,7 +14,7 @@ class Music(commands.Cog):
         creds = await NodePoolCreds.get_creds() 
         node = wavelink.Node(uri=f"http://{creds['host']}:{creds['port']}", password=creds['password'])
         await wavelink.Pool.connect(nodes=[node], client=self.bot, cache_capacity=creds['cache'])
-
+#
     @commands.command()
     async def play(self, ctx, *, query: str):
         """Play a song."""
