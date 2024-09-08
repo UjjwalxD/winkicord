@@ -1,5 +1,9 @@
 import discord, wavelink
 from discord.ext import commands
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from winkicord.nodepool import NodePoolCreds
 
 
 
@@ -17,7 +21,11 @@ class Musicord(wavelink.Player):
 class Music(commands.Cog):
     """Music Cog."""
     def __init__(self, bot):
-        self.bot = bot
+        self.bot = bot 
+        bot.loop.create_task(self.node_connect())
+        
+    async def node_connect(self):
+        nodes = [wavelink.Node(uri="", password="")]
 
     @commands.command()
     async def play(self, ctx, *, song: str):
