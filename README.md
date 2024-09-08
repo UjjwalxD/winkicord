@@ -30,23 +30,20 @@ pip install discord.py
 import discord
 from discord.ext import commands
 import winkicord
-from winkicord import NodePoolCreds
 
 bot = commands.Bot(command_prefix=".", intents=discord.Intents.all())
-
 
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user.name}")
-    await NodePoolCreds(
-        host = "localhost",
-        port = 2000,
-        identifier = "localhost",
-        inactive_timeout = 14000,
-        cache = 130,
-        password = "youshallnotpass"
+    await winkicord.NodePoolCreds.set_creds(
+        host="localhost",
+        port=2000,
+        identifier="localhost",
+        password="youshallnotpass",
+        inactive_timeout=14000,
+        cache=130
     )
     await bot.load_extension('winkicord.music')
 
-
-bot.run("YOUR_BOT_TOKEN")```
+bot.run("YOUR_BOT_TOKEN")
