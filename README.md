@@ -46,7 +46,7 @@ async def on_ready():
     )
     await bot.load_extension('winkicord.music')
 
-bot.run("YOUR_BOT_TOKEN")
+bot.run("YOUR_BOT_TOKEN")```
 
 
 **Note: This Library requires lavalink v4 [lavalink-support](https://discord.gg/lavalink-1082302532421943407)**
