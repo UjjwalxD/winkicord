@@ -22,9 +22,7 @@ Make sure you have Python 3.9 or higher installed. Then, you can install `winkic
 
 ```bash
 pip install winkicord
-pip install discord.py
-```
-
+pip install discord.py```
 
 ```bash
 import discord
